@@ -12,8 +12,8 @@ st.write("Yeh scanner poore 2,000+ NSE stocks ko check karta hai aur sirf unhe d
 @st.cache_data
 def load_all_nse_symbols():
     try:
-      url = "https://raw.githubusercontent.com/shanghaobeta/nse-stocks-list/main/nse_stocks.csv"  
-        df = pd.read_csv(url)
+     url = "https://raw.githubusercontent.com/shanghaobeta/nse-stocks-list/main/nse_stocks.csv"  
+     df = pd.read_csv(url)
         if 'Symbol' in df.columns:
             symbols = df['Symbol'].dropna().unique().tolist()
         else:
